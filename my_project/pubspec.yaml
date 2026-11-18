@@ -1,0 +1,93 @@
+name: student_grades_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- مكتبات النظام والملفات ---
+  path_provider: ^2.1.3
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  file_picker: ^8.0.0 # تأكدت من إصدار متوافق ومستقر
+  open_filex: ^4.4.0
+  flutter_file_dialog: ^3.0.2
+  arabic_utils: ^1.0.0
+  
+  # --- مكتبات التعامل مع البيانات ---
+  excel: ^2.1.0
+  pdf: ^3.10.7
+  printing: ^5.12.0
+  
+  # --- مكتبات الواجهة والرسوم ---
+  cupertino_icons: ^1.0.8
+  fl_chart: ^0.68.0
+  
+  # --- مكتبات الجداول (مهمة للكود السابق) ---
+  syncfusion_flutter_core: ^24.1.41
+  syncfusion_flutter_datagrid: ^24.1.41
+
+  # --- أدوات أخرى ---
+  local_auth: ^2.3.0
+  encrypt: ^5.0.0
+  share_plus: ^10.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  bidi: ^2.0.10
+
+  
+  # مكتبة الأيقونات (تعريف المكتبة فقط هنا)
+  flutter_launcher_icons: ^0.13.1
+  
+  flutter_lints: ^5.0.0
+
+# --- قسم إعدادات Flutter ---
+flutter:
+  uses-material-design: true
+
+  # الأصول (الصور والخطوط)
+  assets:
+    - assets/fonts/arial_arabic.ttf
+    - assets/fonts/Cairo-Regular.ttf
+    - assets/fonts/Amiri-Regular.ttf
+    - assets/fonts/Amiri-Bold.ttf
+    - assets/images/school_logo.png
+    - assets/images/ministry_logo.png
+    - assets/images/app_icon.png
+
+  # تعريف الخطوط لاستخدامها في التطبيق
+  fonts:
+    - family: Amiri
+      fonts:
+        - asset: assets/fonts/Amiri-Regular.ttf
+        - asset: assets/fonts/Amiri-Bold.ttf
+          weight: 700
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-Regular.ttf
+
+# --- إعدادات أيقونة التطبيق (توضع هنا في الأسفل منفصلة) ---
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+
+
+
+# في نهاية الملف
+dependency_overrides:
+  archive: 3.3.2
+  intl: ^0.18.1
